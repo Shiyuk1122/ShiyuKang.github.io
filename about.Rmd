@@ -4,10 +4,10 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: cosmo
 ---
 
-# This is Jeff's awesome website
+# This is Shiyu's awesome website
 
 This page is about how easy it is to make websites.
 

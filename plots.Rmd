@@ -1,0 +1,27 @@
+---
+title: "plots"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is Jeff's awesome website
+
+This page is about how easy it is to make websites
+
+```{r}
+library(tidyverse)
+
+plot_df = 
+  tibble(
+    x = rnorm(100, 2, 3),
+    y = x + norm(100)
+  )
+
+plot_df |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point()
+```
+

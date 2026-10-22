@@ -1,0 +1,24 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is Jeff's awesome website
+
+I learn all my data science from [P8105](https://p8105.com)!
+
+To learn about this page, go [here](about.html)
+
+#some other stuff that's really cool
+
+Here's a really cool picture that I took:
+
+<img src="images/images.jpg" style="width:75%">
+
+Another cool thing is scatterplots, Check this [out](plots.html)
+
+

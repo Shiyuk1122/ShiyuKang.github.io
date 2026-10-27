@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: "Backgroung & Experience"
 output: 
   html_document:
     toc: true
@@ -7,42 +7,96 @@ output:
     theme: cosmo
 ---
 
----
-title: "Resume"
----
+[Download my resume (PDF)](files/Shiyu_Kang_Resume.pdf){target="_blank"}
 
 ## Education
 
 ### Columbia University
-M.S. in Biostatistics
-Expected graduation: May 2028
+**M.S. in Biostatistics**  
+2026–2028 (expected)
+
+Coursework: Probability, Biostatistical Methods, Data Science,
+and Epidemiology.
 
 ### Shanghai University of Finance and Economics
-Undergraduate studies in International Finance  
-Graduated: 2026
+**International Finance** | 2022–2026
+
+Coursework: Mathematical Analysis, Linear Algebra, Probability,
+Mathematical Statistics, Data Structures, and Investments.
 
 ### University of Notre Dame
-Exchange Student, Fall 2024
+**Exchange Student** | Fall 2024
+
+Completed Time Series Analysis with a grade of A+.
+
+## Honors & Awards
+
+- **Outstanding Graduate**, Shanghai University of Finance and Economics, 2026.
+- **People's Scholarship**, Shanghai University of Finance and Economics, Spring 2026.
 
 ## Professional Experience
 
-### ByteDance / TikTok — AI Data Service & Operations
-December 2025 – January 2026
+### ByteDance / TikTok — AI Data Operations
+*December 2025–March 2026*
 
-- Supported data quality review and project coordination.
-- Conducted quality checks and investigated annotation errors.
+Supported annotation project management, tracked quality metrics,
+and conducted sample reviews and root-cause analysis to inform
+data quality improvements.
+
+### Pfizer — Market Access
+*November 2024–March 2025*
+
+Maintained specialty medicine access information across more than
+40 supplementary health insurance programs and supported
+application documentation and cross-functional coordination.
+
+### IQVIA — Business Analysis
+*June–August 2024*
+
+Supported pharmaceutical platform testing, used R for data cleaning
+and trend reporting, and prepared user documentation.
+
+### Taiping Pension Insurance — Asset Management Research
+*January–April 2024*
+
+Reviewed insurance asset management policies and analyzed industry
+capital allocation data using Excel.
+
+## Selected Projects
+
+### Kaggle — Rainfall Prediction
+*Python, TabPFN, XGBoost, scikit-learn*
+
+- Built a prediction workflow covering data cleaning, feature
+  engineering, and model comparison.
+- Used K-fold cross-validation and out-of-fold predictions
+  to evaluate and combine models.
+
+### Semiconductor Project
+*SOX and STAR 50 Cross-Market Analysis | May–June 2026*
+
+- Analyzed cross-market linkages between the SOX index and 15 STAR 50
+  constituents, comparing 10 semiconductor stocks with 5 non-semiconductor
+  controls using correlations, regression betas, and conditional returns.
+- Examined raw and ETF-relative returns over 1–5-day windows following
+  different SOX market moves, identifying stock-specific sensitivities
+  while recognizing limited explanatory power.
 
 
+### Random Forest Implementation
+*Python, R*
 
-## Projects
+- Reimplemented a random forest workflow from R in Python,
+  including feature-space partitioning and gain calculations.
+- Debugged model-building and optimization modules and added
+  parallel computation logic to improve training efficiency.
 
-### Undergraduate Thesis: Market Responses to Trump's Tweets
+## Skills
 
-- Used an event-study framework to examine stock market responses.
-- Compared abnormal returns across sentiment and information categories.
+**Programming:** Python, R, SQL  
+**Machine Learning:** scikit-learn, XGBoost, LightGBM, PyTorch  
+**Visualization & Reporting:** ggplot2, plotly, R Markdown, Excel, Excel Vlookup
 
-## Technical Skills
+## Interests
 
-- Programming: Python, R, SQL
-- Data analysis: tidyverse, scikit-learn
-- Visualization: ggplot2, plotly
+Distance running, badminton, photography, piano, and literature.

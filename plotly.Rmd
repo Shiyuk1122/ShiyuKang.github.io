@@ -15,7 +15,7 @@ library(p8105.datasets)
 library(plotly)
 ```
 
-Loading dara
+Loading data
 
 ```{r}
 data(nyc_airbnb)

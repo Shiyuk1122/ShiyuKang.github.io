@@ -4,6 +4,8 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -16,18 +18,11 @@ library(plotly)
 ```
 
 ```{r}
-data(nyc_airbnb)
-
-nyc_airbnb = nyc_airbnb %>%
-  mutate(rating = review_scores_location/2) %>%
-  select(neighbourhood_group, neighbourhood, rating, price,
-         room_type, lat, long) %>%
-  filter(
-    !is.na(rating),
-    neighbourhood_group == "Manhattan",
-    room_type == "Entire home/apt",
-    price %in% 100:500
-  )
+data(ny_noaa)
+ 
+ny_noaa = ny_noaa |>
+  filter(lubridate::year(date) == 2008) |>
+  drop_na()
 ```
 
 Column {data-width=650}
@@ -36,36 +31,55 @@ Column {data-width=650}
 ### Boxplot
 
 ```{r}
-nyc_airbnb %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>%
+# distribution of monthly max temperature
+noaa_df = ny_noaa |>
+  mutate( 
+    month = 
+     factor(
+      lubridate::month(date),
+      levels = 1:12,
+      labels = month.abb),
+  tmax = as.numeric(tmax)/10,
+  tmin = as.numeric(tmin)/10)
+
+noaa_df |>
   plot_ly(
-    y = ~price, type = "box",
-    color = ~neighbourhood, colors = "viridis"
+    x = ~month, y = ~tmax, type = "box", color = ~month, colors = "viridis"
+  ) |>
+  layout(
+    title = "Daily Maximum Temperatures by Month, 2008",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Maximum temperature (°C)")
   )
+
 ```
 
-Column {data-width=350}
+Column {data-width=500}
 -----------------------------------------------------------------------
 
 ### Scatter
 
 ```{r}
-nyc_airbnb %>%
-  mutate(
-    text_label = str_c("Price: $", price, "Rating: ", rating))%>%
+# scatter plot of the relationship between snow and snwd
+noaa_df |>
   plot_ly(
-    x = ~lat, y = ~long, type = "scatter", mode = "markers",
-    color = ~price
+    x = ~snow, y = ~snwd, type = "scatter", mode = "markers",
+    alpha = 0.3
+  ) |> 
+  layout(
+    title = "Snow vs. Snow Depth",
+    xaxis = list(title = "Snow"),
+    yaxis = list(title = "Snow depth")
   )
 ```
 
-### Boxplot
+### Lineplot
 
 ```{r}
-nyc_airbnb %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>%
+#max and min temperature across months
+noaa_df |>
   plot_ly(
-    y = ~price, type = "box",
+    x = ~month, y = ~tmax, type = "line",
     color = ~neighbourhood, colors = "viridis"
   )
 ```

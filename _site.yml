@@ -1,20 +1,23 @@
-name: "Yay internet!"
+name: "shiyu-kang"
 output_dir: "."
+
 navbar:
-  title: "Home"
-  right:
-    - text: "About"
+  title: "Shiyu Kang"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Resume"
       href: about.html
-    - text: "Plots"
-      href: plots.html
-    - text: "plotly"
-      href: plotly.html
     - text: "Dashboard"
       href: dashboard.html
-    - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
-    - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+  right:
+    - text: "Email"
+      href: mailto:ksy821054@gmail.com
+    - text: "GitHub"
+      href: https://github.com/Shiyuk1122
+    - text: "LinkedIn"
+      href: https://www.linkedin.com/in/shiyu-kang-b5706432a/
+
 output:
   html_document:
     theme: cosmo

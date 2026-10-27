@@ -5,6 +5,7 @@ date: "2026-10-27"
 output: html_document
 ---
 
+
 # Data land libraries
 
 ```{r}
@@ -39,9 +40,6 @@ nyc_airbnb = nyc_airbnb %>%
 nyc_airbnb %>%
   mutate(
     text_label = str_c("Price: $", price, "Rating: ", rating))%>%
-  
-  
-nyc_airbnb %>%
   plot_ly(
     x = ~lat, y = ~long, type = "scatter", mode = "markers",
     color = ~price

@@ -1,5 +1,5 @@
 ---
-title: "Backgroung & Experience"
+title: "Background & Experience"
 output: 
   html_document:
     toc: true

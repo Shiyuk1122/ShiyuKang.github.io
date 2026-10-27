@@ -79,7 +79,7 @@ noaa_df |>
 #max and min temperature across months
 monthly_temp = noaa_df |>
   group_by(month) |>
-  mutate(
+  summarise(
     mean_tmax = mean(tmax),
     mean_tmin = mean(tmin),
     .groups = "drop"
@@ -91,13 +91,12 @@ monthly_temp |>
             name = "mean of Maximum Temperature",
             color = "red") |>
   add_lines(y = ~mean_tmin,
-            name = "mean of Minium Temperature",
+            name = "mean of Minimum Temperature",
             color = "blue") |>
   layout(
     title = "Monthly Temperatures, 2008",
     xaxis = list(title = "Month"),
     yaxis = list(title = "Temperature (°C)")
-  )
   )
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "Shiyu Kang"
 output: 
   html_document:
     toc: true
@@ -7,18 +7,15 @@ output:
     theme: cosmo
 ---
 
-# This is Shiyu's awesome website
+## Welcome!
 
-I learn all my data science from [P8105](https://p8105.com)!
+I am a master's student in Biostatistics at Columbia University, with a focus on Data Science. I previously studied International Finance at Shanghai University of Finance and Economics.I also spent a semester exchanging at University of Notre Dame.
 
-To learn about this page, go [here](about.html)
+My interests include statistical modeling, machine learning, financial modeling, market research and applications of data science in finance and public health.
 
-# some other stuff that's really cool
+Outside of academics, I enjoy badminton,running, photography and playing the piano.
 
-Here's a really cool picture that I took:
+Learn more about my background on my [Resume](about.html) page.
 
-<img src="images/images.jpg" style="width:75%">
-
-Another cool thing is scatterplots, Check this [out](plots.html)
 
 

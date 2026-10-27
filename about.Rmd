@@ -1,5 +1,5 @@
 ---
-title: "about"
+title: "Resume"
 output: 
   html_document:
     toc: true
@@ -7,8 +7,42 @@ output:
     theme: cosmo
 ---
 
-# This is Shiyu's awesome website
+---
+title: "Resume"
+---
 
-This page is about how easy it is to make websites.
+## Education
 
-To go home, click [here](index.html).
+### Columbia University
+M.S. in Biostatistics
+Expected graduation: May 2028
+
+### Shanghai University of Finance and Economics
+Undergraduate studies in International Finance  
+Graduated: 2026
+
+### University of Notre Dame
+Exchange Student, Fall 2024
+
+## Professional Experience
+
+### ByteDance / TikTok — AI Data Service & Operations
+December 2025 – January 2026
+
+- Supported data quality review and project coordination.
+- Conducted quality checks and investigated annotation errors.
+
+
+
+## Projects
+
+### Undergraduate Thesis: Market Responses to Trump's Tweets
+
+- Used an event-study framework to examine stock market responses.
+- Compared abnormal returns across sentiment and information categories.
+
+## Technical Skills
+
+- Programming: Python, R, SQL
+- Data analysis: tidyverse, scikit-learn
+- Visualization: ggplot2, plotly

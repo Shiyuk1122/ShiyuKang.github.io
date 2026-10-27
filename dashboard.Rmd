@@ -77,10 +77,27 @@ noaa_df |>
 
 ```{r}
 #max and min temperature across months
-noaa_df |>
-  plot_ly(
-    x = ~month, y = ~tmax, type = "line",
-    color = ~neighbourhood, colors = "viridis"
+monthly_temp = noaa_df |>
+  group_by(month) |>
+  mutate(
+    mean_tmax = mean(tmax),
+    mean_tmin = mean(tmin),
+    .groups = "drop"
+  )
+
+monthly_temp |>
+  plot_ly(x = ~month) |>
+  add_lines(y = ~mean_tmax,
+            name = "mean of Maximum Temperature",
+            color = "red") |>
+  add_lines(y = ~mean_tmin,
+            name = "mean of Minium Temperature",
+            color = "blue") |>
+  layout(
+    title = "Monthly Temperatures, 2008",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Temperature (°C)")
+  )
   )
 ```
 
